@@ -1,0 +1,35 @@
+<?php
+require_once "../conexionBD.php";
+
+$database = new Conexion();
+$db = $database->conectar();
+
+if(isset($_POST['nombre']) && !empty(trim($_POST['nombre']))) {
+    $nombre = trim($_POST['nombre']); 
+
+    try {
+        $checkSql = "SELECT COUNT(*) FROM marca WHERE nombre = :nombre";
+        $checkStmt = $db->prepare($checkSql);
+        $checkStmt->execute([':nombre' => $nombre]);
+        
+        if ($checkStmt->fetchColumn() > 0) {
+            echo "La marca '$nombre' ya está registrada.";
+        } else {
+            $sql = "INSERT INTO marca (nombre) VALUES (:nombre)";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(':nombre', $nombre);
+            
+            if($stmt->execute()) {
+                echo "Registro guardado correctamente";
+            } else {
+                echo "Error al intentar guardar";
+            }
+        }
+
+    } catch(PDOException $e){
+        echo "Error en la base de datos: " . $e->getMessage();
+    }
+} else {
+    echo "El campo nombre es obligatorio";
+}
+?>

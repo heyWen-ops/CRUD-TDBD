@@ -1,0 +1,295 @@
+/* 1. ESTILOS BASE Y FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #fdf2f8; /* Un fondo rosa muy, muy clarito y limpio */
+    color: #475569;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* 2. ENCABEZADO (HEADER) */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    color: #831843; /* Rosa oscuro/vino para contraste */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #db2777; /* Rosa medio */
+    font-size: 1.1rem;
+}
+
+/* 3. CONTENEDOR PRINCIPAL (MAIN) */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 4. TARJETAS (SECTIONS) */
+section {
+    background-color: #ffffff; /* Las tarjetas se quedan blancas para que resalten */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(252, 231, 243, 0.5), 0 2px 4px -1px rgba(252, 231, 243, 0.3); /* Sombra con un toque sutil de rosa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(219, 39, 119, 0.15); /* Sombra rosada al pasar el mouse */
+}
+
+section h2 {
+    color: #9d174d; /* Rosa oscuro para los títulos */
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #fbcfe8; /* Línea divisoria rosa pálido */
+}
+
+/* 5. NAVEGACIÓN Y BOTONES (Enlaces del panel principal) */
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #fce7f3; /* Fondo rosa claro */
+    color: #be185d; /* Texto rosa fuerte */
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    background-color: #ec4899; /* Fondo rosa vibrante al pasar el mouse */
+    color: #ffffff; /* Texto blanco al pasar el mouse */
+}
+
+/* =========================================
+   6. ESTILOS PARA FORMULARIOS (Inputs y Labels)
+   ========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    color: #9d174d; /* Rosa oscuro */
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 12px 15px;
+    border: 1px solid #fbcfe8; /* Borde rosa clarito */
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #334155;
+    outline: none;
+    background-color: #fdf2f8; /* Fondo apenas rosado */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #ec4899; /* Borde rosa vibrante al escribir */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2); /* Resplandor rosado */
+}
+
+/* =========================================
+   7. BOTONES DE FORMULARIO (Botón Guardar)
+   ========================================= */
+
+.btn-guardar {
+    background-color: #ec4899; /* Rosa vibrante/chicle */
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-guardar:hover {
+    background-color: #db2777; /* Rosa un poco más oscuro al pasar el mouse */
+}
+
+.btn-guardar:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   8. AJUSTES EXTRAS PARA LAS TARJETAS DE REGISTRO
+   ========================================= */
+
+.tarjeta-formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contenedor-volver {
+    margin-top: 25px;
+    border-top: 1px solid #fbcfe8; /* Línea separadora rosa pálido */
+    padding-top: 20px;
+}
+
+/* Botón de volver al inicio */
+.btn-volver {
+    background-color: transparent;
+    color: #db2777; /* Texto rosa medio */
+    border: 1px solid #fbcfe8; /* Borde rosa pálido */
+}
+
+.btn-volver:hover {
+    background-color: #fdf2f8; /* Fondo apenas rosado al pasar el mouse */
+    color: #9d174d; /* Texto rosa oscuro */
+    border-color: #f9a8d4;
+}
+/* =========================================
+   9. ESTILOS PARA TABLAS (Resultados)
+   ========================================= */
+
+.tarjeta-resultado {
+    max-width: 900px; /* Las tablas necesitan un poco más de espacio */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contenedor-tabla {
+    overflow-x: auto; /* Por si la tabla es muy ancha en celulares */
+    margin-bottom: 20px;
+}
+
+.tabla-rosita {
+    width: 100%;
+    border-collapse: collapse; /* Quita los espacios dobles entre celdas */
+    margin-top: 10px;
+    background-color: white;
+}
+
+.tabla-rosita th {
+    background-color: #fce7f3; /* Rosa claro para el encabezado */
+    color: #9d174d; /* Texto rosa oscuro */
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 2px solid #f9a8d4;
+}
+
+.tabla-rosita td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #fdf2f8;
+    color: #475569;
+}
+
+/* Efecto cebra: filas pares con un toque rosa muy sutil */
+.tabla-rosita tbody tr:nth-child(even) {
+    background-color: #fff9fc;
+}
+
+/* Resaltar la fila cuando pasas el mouse */
+.tabla-rosita tbody tr:hover {
+    background-color: #fdf2f8;
+}
+
+.imei-destacado {
+    font-family: 'Courier New', Courier, monospace; /* Estilo de código para el IMEI */
+    font-weight: 600;
+    color: #db2777;
+}
+
+.mensaje-vacio {
+    text-align: center;
+    padding: 40px;
+    color: #db2777;
+    font-style: italic;
+}
+
+/* =========================================
+   10. ESTILOS PARA LOS BOTONES DE ELIMINAR Y ACTUALIZAR
+   ========================================= */
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados como tu tabla */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-update {
+  background-color: #fce4ec; /* Rosa muy claro */
+  color: #ad1457; /* Texto guinda como tus títulos */
+  border: 1px solid #ad1457;
+}
+
+.btn-update:hover {
+  background-color: #ad1457;
+  color: white;
+}
+
+/* Botón Eliminar (Tono rojo/rosa para peligro) */
+.btn-delete {
+  background-color: #fff0f0;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+  color: white;
+}
