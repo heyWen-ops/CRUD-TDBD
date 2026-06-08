@@ -1,3 +1,6 @@
+231K0011 - CHABLE GOMEZ HANNIA ESTEFANI
+231K0016 - MIAM KUYOC WENDY GUADALUPE
+---
 # Conecta W&H - Administración de Inventario 📱✨
 
 ¡Bienvenido a **Conecta W&H**! Este es un sistema web diseñado para gestionar de manera integral el inventario de teléfonos móviles y el control de ventas de forma ordenada, intuitiva y visualmente atractiva.
